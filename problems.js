@@ -64,8 +64,6 @@ function getReadersOfBooks(readers, books, date) {
 }
 
 // Equipment Offerings
-const products = ['snow-blower', 'snow-shovel']
-const regions = ['boston', 'miami']
 const offerings =
 	[ { region: 'boston', supported: 'snow-blower', supplied: 'snow-blower', isPreferred: true, isMatch: true }
 	, { region: 'boston', supported: 'snow-blower', supplied: 'snow-shovel', isPreferred: false, isMatch: false }
