@@ -81,10 +81,14 @@ class Equipment {
 class Service {
 	static markPreferredOferrings(equipment) {
 		equipment.allOfferings()
-			.map(o => o.region)
+			.map(o =>
+				o.region)
 			.distinct()
-			.map(r => this.possiblePreference(equipment, r))
-			.forEach(o => { o.isPreferred = true })
+			.map(r =>
+				this.possiblePreference(equipment, r))
+			.forEach(o => {
+				o.isPreferred = true
+			})
 	}
 
 	static possiblePreference(equipment, region) {
@@ -107,11 +111,17 @@ function airportData() {
 	const data = flightData()
 	const summarize = flights => ({
 		numFlights:       flights.length,
-		numCancellations: flights.filter(f => f.cancelled).length,
-		totalDelay:       flights.filter(f => !f.cancelled).map(f => f.delay).reduce((a,b) => a + b)
+		numCancellations: flights
+							.filter(f => f.cancelled)
+							.length,
+		totalDelay:       flights
+							.filter(f => !f.cancelled)
+							.map(f => f.delay)
+							.reduce((a,b) => a + b)
 	})
 	const formResult = airport => ({
-		meanDelay:        airport.totalDelay / (airport.numFlights - airport.numCancellations),
+		meanDelay:        airport.totalDelay /
+							(airport.numFlights - airport.numCancellations),
 		cancellationRate: airport.numCancellations / airport.numFlights
 	})
 	return _.chain(data)
