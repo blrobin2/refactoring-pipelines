@@ -7,7 +7,7 @@ This repo is for people who are mostly familiar with JavaScript to work through 
 1. `npm test` (or `npm run test:watch` if you want tests to automatically run after every save)
 1. Following the article
 1. If you get stuck, refer to `solutions.js`
-1.1. For "Identifiers" section, underscore.js will be your friend
+    1. For "Identifiers" section, underscore.js will be your friend
 
 ## Acknowledgements
 * Martin Fowler for original article
