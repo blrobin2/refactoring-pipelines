@@ -1,0 +1,21 @@
+{
+  "name": "refactoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "problems.js",
+  "scripts": {
+    "test": "mocha tests.js",
+    "test:watch": "mocha -w tests.js",
+    "test:solutions": "mocha tests.js solutions"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
